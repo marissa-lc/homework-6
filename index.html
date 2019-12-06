@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <title>Weather App</title>
+</head>
+
+<div class="header">
+        <div class="container">
+          <h1 class="display-4">Pudge The Weather Forecaster</h1>
+        </div>
+</div>
+
+<body background="pudge-the-fish.jpg">
+
+  <div class="box">
+    <p>Search for a City</p>
+    <textarea>enter city...</textarea>
+    <br>
+    <button weather-forecast type="button" class="btn btn-info">Search</button>
+  </div>
+
+  <div id="weather-forecast"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $("button").on("click", function() {
+
+      var city = $(this).attr("weather-forecast");
+
+      var qyeryURL = "api.openweathermap.org/data/2.5/forecast?q={city name},{country code}" 
+      + weather + "&APPID=ec005a4d438254f2156a1da5a1219ae8";
+
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+    })
+
+    //* Use AJAX to hook into the API to retrieve data in JSON format.
+ 
+
+//* Your app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+
+//* Display the following under current weather conditions:
+
+//  * City
+
+//  * Date
+
+//  * Icon image (visual representation of weather conditions)
+
+//  * Temperature
+
+//  * Humidity
+
+//  * Wind speed
+
+//  * UV index
+
+//* Include a search history so that users can access their past search terms. Clicking on the city name should perform a new search that returns current and future conditions for that city. 
+
+//* Include a 5-Day Forecast below the current weather conditions. Each day for the 5-Day Forecast should display the following:
+
+//  * Date
+
+//  * Icon image (visual representation of weather conditions)
+
+//  * Temperature
+
+//  * Humidity
+
+
+</script>      
+
+
+
+
+ 
+
+</body>
+</html>
